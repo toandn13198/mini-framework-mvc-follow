@@ -1,0 +1,7 @@
+#bat rewrite
+RewriteEngine On
+#dieu kien de ap dung rewrite(khong can file hay folder that )
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#tu dong gan index.php vao url
+RewriteRule ^ index.php [L,QSA]
